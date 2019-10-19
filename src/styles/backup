@@ -1,0 +1,151 @@
+$textColor: white;
+
+// :root {
+//   --navbarHeight: 70px;
+// }
+// @media screen and (max-width: 640px) {
+//   :root {
+//     --navbarHeight: 30px;
+//   }
+// }
+
+$navbarHeight_desktop: 70px;
+$navbarHeight_mobile: 30px;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.greenButton {
+  background-color: #5AD576;
+  box-shadow: 3px 3px #3D9B51;
+  border: none;
+  &:hover {
+    background-color: #3D9B51;
+    box-shadow: 3px 3px rgb(45, 113, 60);
+  }
+  &:active {
+    background: rgb(150, 255, 175) !important;
+  }
+}
+
+.navbar {
+    background-color: #9f5ad5;
+    opacity: 0.5;
+
+    a, .navbar-brand, .navbar-nav .nav-link {
+      color: $textColor;
+      line-height: $navbarHeight_desktop;
+      height: $navbarHeight_desktop;
+      padding-top: 0;
+      &:hover {
+        color: red;
+      }
+      @media screen and (max-width: 640px) {
+        line-height: $navbarHeight_mobile;
+        height: $navbarHeight_mobile;
+      }
+    }
+
+  }
+
+
+  .home {
+    .landingContainer {
+      background-color: rgb(255, 211, 195);
+      padding: 2.5% 5% 2%;
+      height: calc(100vh - $navbarHeight_desktop);
+      // margin-top: $navbarHeight_desktop;
+
+      .row {
+        @include flexCenter;
+      }
+
+      .pic {
+        border: 1px solid red;    
+        height: 65%;
+      }
+  
+      .text {
+        border: 1px solid blue;    
+        height: 20%; 
+      }
+  
+      .button {
+        border: 1px solid yellow;      
+        height: 15%; 
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      height: calc(100vh - $navbarHeight_mobile);
+      margin-top: $navbarHeight_mobile;
+    }
+
+  }
+
+  .searchPage {
+
+    margin-top: $navbarHeight_desktop;
+    width: 100%;
+
+    .row {
+      @include flexCenter;
+    }
+
+    .jumbo {
+      border: 1px solid black;
+    }
+
+    .searchPageContainer {
+      border: 1px solid lightgrey;
+
+      .location {
+        border: 1px solid paleturquoise;
+      }
+      .checkIn {
+        border: 1px solid palegreen;
+      }
+      .checkOut {
+        border: 1px solid palegoldenrod;
+      }
+      .findButton {
+        border: 1px solid lightpink;
+      }
+    }
+
+    .resultsBanner {
+      border: 1px solid palegoldenrod;
+    }
+
+    .resultsContent {
+      border: 1px solid lightsalmon;
+      .filterContainer{
+        border: 1px solid lightseagreen;
+        .filterLabel{
+          border: 1px solid lightskyblue;
+        }
+        .accommodation{
+          border: 1px solid rgb(255, 212, 147);
+        }
+        .activities{
+          border: 1px solid springgreen;
+        }
+      }
+    }
+
+@media screen and (max-width: 640px) {
+  margin-top: $navbarHeight_mobile;
+}
+
+  }
+
+
+  .searchBar {
+    // background-color: purple;
+  }
+
+
