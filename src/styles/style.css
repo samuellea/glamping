@@ -1,18 +1,35 @@
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .greenButton {
   background-color: #5AD576;
   -webkit-box-shadow: 3px 3px #3D9B51;
           box-shadow: 3px 3px #3D9B51;
   border: none;
+  font-size: 24px;
+  font-weight: bold;
+  width: 200px;
 }
 
 .greenButton:hover {
-  background-color: #3D9B51;
-  -webkit-box-shadow: 3px 3px #2d713c;
-          box-shadow: 3px 3px #2d713c;
+  background-color: #2d713c;
+  -webkit-box-shadow: 3px 3px #3D9B51;
+          box-shadow: 3px 3px #3D9B51;
 }
 
 .greenButton:active {
   background: #96ffaf !important;
+}
+
+.purpleTitle {
+  color: #4C2A66;
+  font-weight: bold;
+}
+
+.bigNavbar .navbar .navbar-brand {
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .bigNavbar .navbar a, .bigNavbar .navbar .navbar-brand, .bigNavbar .navbar .navbar-nav .nav-link {
@@ -27,6 +44,10 @@
     line-height: 30px;
     height: 30px;
   }
+}
+
+.smallNavbar .navbar .navbar-brand {
+  font-weight: bold;
 }
 
 .smallNavbar .navbar a, .smallNavbar .navbar .navbar-brand, .smallNavbar .navbar .navbar-nav .nav-link {
@@ -61,6 +82,28 @@
     line-height: 30px;
     height: 30px;
   }
+}
+
+.navbar .navbarIcon {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.navbar .navbarOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.navbarTogglez {
+  color: red;
 }
 
 .home {
@@ -137,10 +180,13 @@
 }
 
 .searchPage .searchPageContainer .searchBarContainer {
+  border: 1px solid blue;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0%;
   z-index: 9999;
   background-color: white;
   height: auto;
-  border: 1px solid blue;
   position: -webkit-sticky;
   position: sticky;
   top: 56px;
@@ -155,8 +201,29 @@
           align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .searchBarContainer {
+    padding: 0%;
+  }
+}
+
 .searchPage .searchPageContainer .resultsBanner {
   border: 1px solid palegoldenrod;
+  padding: 20px;
+}
+
+.searchPage .searchPageContainer .resultsBanner p {
+  padding: 0%;
+  margin: 0%;
+}
+
+.searchPage .searchPageContainer .resultsBanner .resultsNumber {
+  color: #5AD576;
+  font-weight: 900;
+}
+
+.searchPage .searchPageContainer .resultsBanner .resultsEnd {
+  color: #5AD576;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer {
@@ -187,44 +254,215 @@
   top: 108px;
   z-index: 999;
   background-color: white;
+  padding: 0%;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .labelFontsize {
+  font-size: 18px;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer ul {
+  padding-left: 4%;
+  padding-top: 0%;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 40px;
   border: 1px solid lightskyblue;
+  color: #55ae68;
+  background-color: #C3FFD0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterLabel {
+    height: 30px;
+  }
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .optionSegment {
+  padding-left: 5%;
+  height: 40px;
+  font-weight: 700;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20% 20%;
+      grid-template-columns: 1fr 20% 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .optionSegment {
+    height: 30px;
+    padding-bottom: 2.5%;
+  }
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .optionSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .clearButton {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  color: gray;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .clearButton:hover {
+  color: #9f5ad5;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .openButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: white;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  border: none;
+  color: #9f5ad5;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .arrow-closed {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.1, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.01, 0.1, 0.1, 1);
+  position: relative;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .arrow-open {
+  -webkit-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.1, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.01, 0.1, 0.1, 1);
+  position: relative;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .accommodation {
   border: 1px solid #ffd493;
-  height: 30px;
+  height: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   overflow: hidden;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .accommodation.open {
-  height: 215px;
+  height: 285px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .accommodation {
+    height: 30px;
+  }
+}
+
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .activities {
   border: 1px solid springgreen;
-  height: 30px;
+  height: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   overflow: hidden;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .activities.open {
-  height: 215px;
+  height: 285px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .activities {
+    height: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer {
     top: 158px;
   }
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterOption {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25px 1fr;
+      grid-template-columns: 25px 1fr;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterOption:hover {
+  background-color: lightgrey;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterOption .left {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterOption .right {
+  margin-left: 3%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .resultsContainer {
@@ -236,16 +474,10 @@
     height: calc(100vh - 30px - 25px);
     margin-top: calc(30px + 25px);
   }
-  .searchPage .searchBarContainer {
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
-    min-height: min-content;
-  }
 }
 
 .searchBar {
-  padding: 0% 5%;
-  width: 100%;
+  width: 100vw;
 }
 
 .searchBar .col, .searchBar [class*="col-"] {
@@ -260,6 +492,19 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-items: center;
+}
+
+.searchBar .borderBox {
+  margin: 10px 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  height: 90%;
 }
 
 .searchBar .location {
@@ -275,7 +520,28 @@
 }
 
 .searchBar .findButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   border: 1px solid lightpink;
+}
+
+.searchBar .searchButton {
+  font-size: 24px;
+  height: 40px;
+  padding: 0%;
+  margin: 0%;
+}
+
+.pageLinker {
+  text-decoration: none !important;
 }
 
 .resultCard {
@@ -283,6 +549,7 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   margin: 1% 0%;
+  color: gray;
 }
 
 .resultCard .pictureContainer {
@@ -309,10 +576,14 @@
 
 .resultCard .infoContainer .descriptionContainer {
   text-align: left;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: 120px;
   margin: 3% 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .resultCard .infoContainer .descriptionContainer {
+    height: 60px;
+  }
 }
 
 .resultCard .infoContainer .descriptionContainer p {
@@ -323,13 +594,12 @@
 }
 
 .resultCard .infoContainer .buttonContainer {
-  background-color: lightpink;
   float: right;
 }
 
 @media screen and (max-width: 768px) {
   .resultCard {
-    height: 63vh;
+    height: 60vh;
     margin: 2% 0% 10%;
   }
   .resultCard .pictureContainer {
@@ -349,5 +619,262 @@
   .resultCard .infoContainer .descriptionContainer p {
     -webkit-line-clamp: 2;
   }
+}
+
+.resultCard .moreInfoButton {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  background-color: #9f5ad5;
+  -webkit-box-shadow: 3px 3px #5f3282;
+          box-shadow: 3px 3px #5f3282;
+}
+
+.resultCard .moreInfoButton:hover {
+  background-color: #5f3282;
+  -webkit-box-shadow: 3px 3px #9f5ad5;
+          box-shadow: 3px 3px #9f5ad5;
+}
+
+.resultCard .moreInfoButton:active {
+  background: #96ffaf !important;
+}
+
+.searchBar {
+  padding: 0%;
+}
+
+.searchBar #dropdown-custom-1 {
+  color: black;
+  background-color: white;
+  border: 0px;
+}
+
+.searchBar #dropdown-custom-2 {
+  color: #5AD576;
+  background-color: white;
+  margin: 5% 5%;
+  border: 0px;
+}
+
+.searchBar #dropdown-custom-2:hover {
+  color: purple;
+  background-color: white;
+}
+
+.searchBar #dropdown-custom-2:active {
+  background: #96ffaf !important;
+}
+
+.searchBar #dropdown-custom-2:focus {
+  color: white;
+  background: purple !important;
+}
+
+.searchBar .calendarInput {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 30%;
+      grid-template-columns: 1fr 30%;
+}
+
+.searchBar .calendarInput .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.searchBar .calendarInput .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.sitePage .carousel {
+  height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.sitePage .carousel img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+}
+
+.sitePage .carousel-control-next-icon {
+  padding: 20%;
+  border-radius: 100px;
+}
+
+.sitePage .carousel-control-prev-icon {
+  padding: 20%;
+  border-radius: 100px;
+}
+
+.sitePage .sitePageContainer {
+  border: 1px solid red;
+  margin-top: 105px;
+}
+
+@media screen and (max-width: 768px) {
+  .sitePage .sitePageContainer {
+    margin-top: 70px;
+  }
+}
+
+.sitePage .country {
+  width: 100%;
+  border: 1px solid #b383f5;
+  color: #419dff;
+}
+
+.sitePage .title {
+  width: 100%;
+  border: 1px solid paleturquoise;
+}
+
+.sitePage .miniNav {
+  background-color: #F6EAFF;
+  width: 100%;
+  border: 1px solid lightseagreen;
+  text-align: center;
+}
+
+.sitePage .miniNav .nav-link {
+  margin: 0%;
+  text-align: center;
+  color: purple;
+  border-radius: 5px;
+}
+
+.sitePage .miniNav .nav-link:hover {
+  color: white;
+  background-color: #4C2A66;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sitePage .miniNav .nav-link:active {
+  color: #4C2A66;
+}
+
+.sitePage .miniNav .nav-link:focus {
+  color: red;
+  font-weight: 700;
+}
+
+.sitePage .miniNav .bookButton {
+  color: white;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .sitePage .miniNav .bookButton {
+    width: 100%;
+    height: 115%;
+  }
+}
+
+.sitePage .aboutSection {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  border: 1px solid lightpink;
+}
+
+.sitePage .aboutSection .about {
+  width: 100%;
+  border: 1px solid palegoldenrod;
+}
+
+.sitePage .aboutSection .description {
+  width: 100%;
+  border: 1px solid lightgreen;
+  color: gray;
+}
+
+.sitePage .accActLegend {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  border: 1px solid lightyellow;
+  margin: 0%;
+}
+
+.sitePage .accActLegend .accommodationLegend {
+  width: 100%;
+  border: 1px solid palevioletred;
+  padding-left: 2%;
+}
+
+.sitePage .accActLegend .activitiesLegend {
+  width: 100%;
+  border: 1px solid mediumpurple;
+  padding-left: 2%;
+}
+
+.sitePage .accActLegend #iconBox {
+  width: 30px;
+  height: 30px;
+}
+
+.sitePage .availability {
+  width: 100%;
+  border: 1px solid slategrey;
+}
+
+.sitePage .mapContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  overflow: hidden;
+}
+
+.simpleMap {
+  display: block;
+  position: relative !important;
+  width: 70rem !important;
+  height: 30rem !important;
 }
 /*# sourceMappingURL=style.css.map */

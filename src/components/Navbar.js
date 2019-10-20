@@ -25,21 +25,32 @@ class NavigationBar extends Component {
 
     return (
       <div className={`${this.state.navbarClass}`}>
-        <Navbar expand="lg" fixed="top">
+        <Navbar expand="lg" fixed="top" variant="dark">
           <Link to={"/"}>
-            <Navbar.Brand>NorthcodersGlamping</Navbar.Brand>
+            <Navbar.Brand><span style={{ color: '#4C2A66' }}>Northcoders</span><span style={{ color: 'white' }}>Glamping</span></Navbar.Brand>
           </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbarTogglez" />
+          <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="ml-auto">
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/search">Search</Link>
+                  <Link to="/search">
+                    <div className="navbarOption">
+                      <span className="navbarIcon"><i class="fas fa-search"></i></span>
+                      <span className="h5 mb-0">Search</span>
+                    </div>
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">
+                    <div className="navbarOption">
+                      <span className="navbarIcon"><i class="far fa-question-circle"></i></span>
+                      <span className="h5 mb-0">About</span>
+                    </div>
+
+                  </Link>
                 </Nav.Link>
               </Nav.Item>
             </Nav>

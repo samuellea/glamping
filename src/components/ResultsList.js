@@ -40,8 +40,18 @@ class ResultsList extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    console.log('resultsList UPDATED')
+    const resultsChange = (prevProps.results !== this.props.results);
     const filterChange = (prevProps.filteredResults !== this.props.filteredResults);
+    if (resultsChange) {
+      console.log('RESULTS CHANGED!!')
+      this.setState({
+        results: this.props.results
+      })
+    }
+
     if (filterChange) {
+      console.log('FILTER CHANGED!!')
       this.setState({
         results: this.props.filteredResults
       })

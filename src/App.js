@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import Home from './components/Home';
 import SearchPage from './components/SearchPage';
+import SitePage from './components/SitePage';
 import Error from './components/Error';
 import NavigationBar from './components/Navbar';
 import './styles/style.css';
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Home path='/' />
         <SearchPage path='/search' />
+        <SitePage path='/sites/:id' />
         <Error default />
       </Router>
     </div>

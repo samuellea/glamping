@@ -24,9 +24,24 @@ class Filter extends Component {
     ]
   };
 
-  handleMenuClick = (event) => {
-    const { accommodationMenu, activitiesMenu } = this.state;
+  handleClearClick = (event) => {
     const { target: { value } } = event
+    let statePropToUpdate = `${value}Options`;
+    let optionsToClear = [...this.state[statePropToUpdate]];
+    optionsToClear.forEach(option => {
+      option.checked = false;
+    })
+    this.setState({
+      [statePropToUpdate]: optionsToClear
+    })
+
+    this.props.clearFilterTerms();
+  }
+
+  handleMenuClick = (value) => {
+    console.log('handleMenuClick!')
+    const { accommodationMenu, activitiesMenu } = this.state;
+    // const { target: { value } } = event
     if (value === 'accommodation') {
       if (accommodationMenu === 'closed') {
         this.setState({
@@ -77,18 +92,32 @@ class Filter extends Component {
     const { accommodationMenu, activitiesMenu, accommodationOptions, activitiesOptions } = this.state;
     return (
       <>
-        <div className="filterLabel">Filter</div>
+        <div className="filterLabel labelFontsize">Filter</div>
         <div className={`accommodation ${accommodationMenu}`}>
-          Accommodation
-        <button onClick={this.handleMenuClick} value="accommodation">Click</button>
+
+          <div className="optionSegment labelFontsize">
+            <div className="optionSection">
+              Accommodation
+            </div>
+            <button onClick={this.handleClearClick} className="clearButton" value="accommodation">Clear</button>
+
+            <button onClick={this.handleMenuClick} className="openButton" >
+              <i class={`fas fa-chevron-down fa-lg arrow-${accommodationMenu}`} onClick={() => this.handleMenuClick('accommodation')}></i>
+            </button>
+
+          </div>
 
           <ul>
             {accommodationOptions.map(option => {
               return (
 
                 <div className="filterOption" onClick={() => this.handleOptionClick(option.name, 'accommodation')}>
-                  <span><i className={option.checked === false ? "far fa-circle" : "fas fa-check-circle"}></i></span>
-                  {option.name}
+                  <div className="left">
+                    <i className={option.checked === false ? "far fa-square" : "fas fa-check-square"}></i>
+                  </div>
+                  <div className="right">
+                    {option.name.split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')}
+                  </div>
                 </div>
 
               )
@@ -97,16 +126,30 @@ class Filter extends Component {
 
         </div>
         <div className={`activities ${activitiesMenu}`}>
-          Activities
-        <button onClick={this.handleMenuClick} value="activities">Click</button>
+
+          <div className="optionSegment labelFontsize">
+            <div className="optionSection">
+              Activities
+            </div>
+            <button onClick={this.handleClearClick} value="activities" className="clearButton">Clear</button>
+
+            <button onClick={this.handleMenuClick} className="openButton" >
+              <i class={`fas fa-chevron-down fa-lg arrow-${activitiesMenu}`} onClick={() => this.handleMenuClick('activities')}></i>
+            </button>
+
+          </div>
 
           <ul>
             {activitiesOptions.map(option => {
               return (
 
                 <div className="filterOption" onClick={() => this.handleOptionClick(option.name, 'activities')}>
-                  <span><i className={option.checked === false ? "far fa-circle" : "fas fa-check-circle"}></i></span>
-                  {option.name}
+                  <div className="left">
+                    <i className={option.checked === false ? "far fa-square" : "fas fa-check-square"}></i>
+                  </div>
+                  <div className="right">
+                    {option.name.split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')}
+                  </div>
                 </div>
 
               )

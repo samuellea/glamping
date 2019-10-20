@@ -12,7 +12,8 @@ class SearchPage extends Component {
   state = {
     results: [],
     filterTerms: [],
-    filteredResults: []
+    filteredResults: [],
+    location: 'any location'
   }
 
   handleAccommodationClick = (event) => {
@@ -39,31 +40,62 @@ class SearchPage extends Component {
     }
   }
 
+  clearFilterTerms = () => {
+    console.log('reaching clearFilterTerms');
+    this.setState({
+      filterTerms: []
+    })
+  }
+
+  receiveSearchResults = (refinedResults, location) => {
+    console.log('reaching performSearch')
+    if (location === 'Any Location') location = 'any location';
+    console.log(refinedResults, '!');
+    this.setState({
+      results: refinedResults,
+      location: location
+    })
+  }
+
   render() {
-    const { filterTerms } = this.state;
+    const { filterTerms, filteredResults } = this.state;
     return (
       <div className="searchPage">
-        <Container className="searchPageContainer" fluid={true}>
+        <Container className="searchPageContainer" >
 
           <Row className="jumbo">
             JUMBO
           </Row>
 
-          <div className="searchBarContainer">
-            <SearchBar />
-          </div>
 
-          <Row className="resultsBanner">
-            RESULTSBANNER
+          <Row className="searchBarContainer">
+            <SearchBar receiveSearchResults={this.receiveSearchResults} />
+          </Row>
+
+
+          <Row className="resultsBanner font-weight-bold h3">
+            {
+              filteredResults.length > 0
+                ?
+                <p>
+                  <span className="resultsText"> Glampsites found in </span>
+                  <span className="resultsCountry">{this.state.location} - </span>
+                  <span className="resultsNumber">{filteredResults.length}</span>
+                  <span className="resultsEnd"> results.</span>
+
+                </p>
+                :
+                <p>0 result :(</p>
+            }
           </Row>
 
           <div className="filterAndResultsContainer">
             <Row className="filterAndResults">
               <Col xs={12} md={4} className="filterContainer">
-                <Filter updateFilterTerms={this.updateFilterTerms} />
+                <Filter updateFilterTerms={this.updateFilterTerms} clearFilterTerms={this.clearFilterTerms} />
               </Col>
               <Col xs={12} md={8} className="resultsContainer">
-                <ResultsList filteredResults={this.state.filteredResults} />
+                <ResultsList results={this.state.results} filteredResults={this.state.filteredResults} />
               </Col>
             </Row>
           </div>
@@ -84,10 +116,12 @@ class SearchPage extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    console.log('searchPage UPDATED ///////////////////////')
     const filterChange = (prevState.filterTerms !== this.state.filterTerms);
+    const resultsChange = (prevState.results !== this.state.results)
     const { results, filterTerms } = this.state;
 
-    if (filterChange) {
+    if (filterChange || resultsChange) {
       if (filterTerms.length == 0) {
         this.setState({
           filteredResults: results
