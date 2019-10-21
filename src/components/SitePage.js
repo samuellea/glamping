@@ -128,8 +128,8 @@ class SitePage extends Component {
             </Row>
           </div>
 
-          <div className="aboutSection" id="aboutSection">
-            <div className="about h2 mt-4 purpleTitle">
+          <div className="aboutSection mb-5" id="aboutSection">
+            <div className="about h2 mt-4  purpleTitle">
               About
             </div>
             <div className="description h5 mt-3">
@@ -137,7 +137,7 @@ class SitePage extends Component {
             </div>
           </div>
 
-          <Row className="accActLegend mt-3">
+          <Row className="accActLegend mt-3 mb-5">
             <Col className="accommodationLegend" xs={6} md={4}>
               <div className="purpleTitle h3 accommodationSubheading pb-2">Accommodation</div>
               {
