@@ -1,5 +1,24 @@
 $textColor: white;
 
+
+@import url('https://fonts.googleapis.com/css?family=Asap:bold,400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,700');
+
+
+.roundTitle {
+  font-family: 'Asap', sans-serif;
+  font-weight: bold;
+}
+
+.hindText {
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+
+}
+
+.redder{
+  color: red;
+}
 // :root {
 //   --navbarHeight: 70px;
 // }
@@ -52,20 +71,31 @@ $navbarHeight_mobile: 19px;
   .bigNavbar {
     .navbar {
       // background-color: blue;
+
       .navbar-brand {
         // color: red;
-        font-size: 35px;
+        font-size: 40px;
         font-weight: bold;
       }
+
+  
 
       a, .navbar-brand, .navbar-nav .nav-link {
         line-height: 70px;
         height: 70px;
         transition: 0.2s;
         @media screen and (max-width: 768px) {
+
           line-height: ($navbarHeight_mobile);
           height: $navbarHeight_mobile;
         }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar-brand {
+        font-size: 30px;
+        font-weight: bold;
+      }
     }
 
     }
@@ -76,8 +106,8 @@ $navbarHeight_mobile: 19px;
     .navbar {
       // background-color: red;
       .navbar-brand {
-        // color: red;
-        // font-size: 35px;
+
+        // font-size: 20px;
         font-weight: bold;
       }
       a, .navbar-brand, .navbar-nav .nav-link {
@@ -110,11 +140,12 @@ $navbarHeight_mobile: 19px;
       a, .navbar-nav .nav-link {
         margin-top: 2.75%;
         margin-bottom: 2%;
-  
+        
         line-height: $navbarHeight_mobile;
         height: $navbarHeight_mobile;
 
       }
+
 
     }
     .navbarIcon {

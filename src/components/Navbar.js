@@ -27,7 +27,7 @@ class NavigationBar extends Component {
       <div className={`${this.state.navbarClass}`}>
         <Navbar expand="lg" fixed="top" variant="dark">
           <Link to={"/"}>
-            <Navbar.Brand><span style={{ color: '#4C2A66' }}>Northcoders</span><span style={{ color: 'white' }}>Glamping</span></Navbar.Brand>
+            <Navbar.Brand className="roundTitle"><span style={{ color: '#4C2A66' }}>Northcoders</span><span style={{ color: 'white' }}>Glamping</span></Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbarTogglez" />
           <Navbar.Collapse id="basic-navbar-nav" >
@@ -44,12 +44,10 @@ class NavigationBar extends Component {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link>
-                  {/* <Link to="/about"> */}
                   <div className="navbarOption">
                     <span className="navbarIcon"><i class="far fa-question-circle fa-xs"></i></span>
                     <span className="h5 mb-0">About</span>
                   </div>
-                  {/* </Link> */}
                 </Nav.Link>
               </Nav.Item>
             </Nav>
