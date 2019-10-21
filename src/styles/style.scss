@@ -301,6 +301,7 @@ $navbarHeight_mobile: 19px;
 
   .searchPage {
 
+
     .purpletent {
       height: 100px;
       width: 100px;
@@ -322,9 +323,10 @@ $navbarHeight_mobile: 19px;
       border: 1px solid lightgrey;
       // background-color:#EADCF5;
 
-      // margin: 0;
-      // padding: 0%;
+      padding: 0%;
 
+
+      
     .jumbo {
       // border: 1px solid black;
       height: 200px;
@@ -333,7 +335,7 @@ $navbarHeight_mobile: 19px;
     .searchBarContainerWrapper {
       // width: 100%;
       padding: 0%;
-      margin: -15px;
+      // margin: -15px;
       position: sticky;
       top: 56px;
       z-index: 9999;
@@ -387,8 +389,14 @@ $navbarHeight_mobile: 19px;
         z-index: 999;
         background-color: white;
         padding: 0%;
+        // border-bottom: 1px solid lightgray;
 
-        border-bottom: 1px solid lightgray;
+
+      // @media screen and (max-width: 768px) {
+      // margin: 0;
+      // padding: 0%;
+      // }
+
         .labelFontsize {
           font-size: 18px;
         }
@@ -407,7 +415,8 @@ $navbarHeight_mobile: 19px;
       @include flexCenter;
       height: 40px;
           color: rgb(85, 174, 104);
-          background-color: #C3FFD0;
+          // background-color: #C3FFD0;
+          background-image: linear-gradient(to right, white , #C3FFD0);
           font-weight: bold;
           @media screen and (max-width: 768px) {
             height: 30px; 
@@ -527,6 +536,11 @@ $navbarHeight_mobile: 19px;
 
       .resultsContainer {
         // border: 1px solid pink;
+        padding-left: 0%;
+        padding-right: 2%;
+        @media screen and (max-width: 768px) {
+          padding: 2%;
+        }
       }
     }
   }
@@ -1018,4 +1032,9 @@ $navbarHeight_mobile: 19px;
   -moz-animation: flickerAnimation 5s infinite;
   -o-animation: flickerAnimation 5s infinite;
    animation: flickerAnimation 5s infinite;
+}
+
+.errorPage {
+  @include flexCenter;
+  background-color: red;
 }

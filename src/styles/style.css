@@ -320,6 +320,7 @@
 
 .searchPage .searchPageContainer {
   border: 1px solid lightgrey;
+  padding: 0%;
 }
 
 .searchPage .searchPageContainer .jumbo {
@@ -328,7 +329,6 @@
 
 .searchPage .searchPageContainer .searchBarContainerWrapper {
   padding: 0%;
-  margin: -15px;
   position: -webkit-sticky;
   position: sticky;
   top: 56px;
@@ -404,7 +404,6 @@
   z-index: 999;
   background-color: white;
   padding: 0%;
-  border-bottom: 1px solid lightgray;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .labelFontsize {
@@ -429,7 +428,8 @@
   text-align: center;
   height: 40px;
   color: #55ae68;
-  background-color: #C3FFD0;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(#C3FFD0));
+  background-image: linear-gradient(to right, white, #C3FFD0);
   font-weight: bold;
 }
 
@@ -616,6 +616,17 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .resultsContainer {
+  padding-left: 0%;
+  padding-right: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .resultsContainer {
+    padding: 2%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1080,5 +1091,19 @@
 .animate-flicker {
   -webkit-animation: flickerAnimation 5s infinite;
   animation: flickerAnimation 5s infinite;
+}
+
+.errorPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */
