@@ -1,6 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import Home from './components/Home';
+import Footer from './components/Footer';
+
 import SearchPage from './components/SearchPage';
 import SitePage from './components/SitePage';
 import Error from './components/Error';

@@ -72,7 +72,7 @@ class SearchBar extends Component {
       <Row className="searchBar">
         <Col xs={6} md={3} className="location" >
           <div className="borderBox">
-            <Dropdown style={{ width: '100%', height: "100%" }}>
+            <Dropdown variant="danger" style={{ width: '100%', height: "100%" }}>
               <Dropdown.Toggle id="dropdown-custom-1" style={{ width: '100%', height: "100%" }}>
                 {this.state.location}
               </Dropdown.Toggle>

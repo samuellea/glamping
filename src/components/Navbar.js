@@ -31,12 +31,12 @@ class NavigationBar extends Component {
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbarTogglez" />
           <Navbar.Collapse id="basic-navbar-nav" >
-            <Nav className="ml-auto">
-              <Nav.Item>
+            <Nav className="ml-auto concertinaBit">
+              <Nav.Item className="xyzz">
                 <Nav.Link>
                   <Link to="/search">
                     <div className="navbarOption">
-                      <span className="navbarIcon"><i class="fas fa-search"></i></span>
+                      <span className="navbarIcon"><i class="fas fa-search fa-xs"></i></span>
                       <span className="h5 mb-0">Search</span>
                     </div>
                   </Link>
@@ -44,13 +44,12 @@ class NavigationBar extends Component {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link>
-                  <Link to="/about">
-                    <div className="navbarOption">
-                      <span className="navbarIcon"><i class="far fa-question-circle"></i></span>
-                      <span className="h5 mb-0">About</span>
-                    </div>
-
-                  </Link>
+                  {/* <Link to="/about"> */}
+                  <div className="navbarOption">
+                    <span className="navbarIcon"><i class="far fa-question-circle fa-xs"></i></span>
+                    <span className="h5 mb-0">About</span>
+                  </div>
+                  {/* </Link> */}
                 </Nav.Link>
               </Nav.Item>
             </Nav>

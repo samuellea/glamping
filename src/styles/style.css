@@ -22,6 +22,10 @@
   background: #96ffaf !important;
 }
 
+.findMineButton {
+  width: 400px;
+}
+
 .purpleTitle {
   color: #4C2A66;
   font-weight: bold;
@@ -41,8 +45,8 @@
 
 @media screen and (max-width: 768px) {
   .bigNavbar .navbar a, .bigNavbar .navbar .navbar-brand, .bigNavbar .navbar .navbar-nav .nav-link {
-    line-height: 30px;
-    height: 30px;
+    line-height: 19px;
+    height: 19px;
   }
 }
 
@@ -59,28 +63,33 @@
 
 @media screen and (max-width: 768px) {
   .smallNavbar .navbar a, .smallNavbar .navbar .navbar-brand, .smallNavbar .navbar .navbar-nav .nav-link {
-    line-height: 30px;
-    height: 30px;
+    line-height: 19px;
+    height: 19px;
   }
 }
 
 .navbar {
   background-color: #9f5ad5;
+  z-index: 99999;
 }
 
 .navbar a, .navbar .navbar-brand, .navbar .navbar-nav .nav-link {
+  text-decoration: none !important;
   color: white;
   padding-top: 0;
+  line-height: 500px;
 }
 
 .navbar a:hover, .navbar .navbar-brand:hover, .navbar .navbar-nav .nav-link:hover {
-  color: red;
+  color: #4C2A66;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar a, .navbar .navbar-brand, .navbar .navbar-nav .nav-link {
-    line-height: 30px;
-    height: 30px;
+  .navbar a, .navbar .navbar-nav .nav-link {
+    margin-top: 2.75%;
+    margin-bottom: 2%;
+    line-height: 19px;
+    height: 19px;
   }
 }
 
@@ -100,10 +109,9 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.navbarTogglez {
-  color: red;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .home {
@@ -112,9 +120,7 @@
 }
 
 .home .landingContainer {
-  background-color: #ffd3c3;
   padding: 2.5% 5% 2%;
-  height: 100%;
 }
 
 .home .landingContainer .row {
@@ -131,30 +137,172 @@
 }
 
 .home .landingContainer .pic {
-  border: 1px solid red;
   height: 65%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .home .landingContainer .pic {
+    margin-top: 5%;
+  }
+}
+
+.home .landingContainer .homegif {
+  width: 475px;
+  height: auto;
+  -webkit-filter: hue-rotate(60deg);
+          filter: hue-rotate(60deg);
+  margin: 0%;
+  margin: 0%;
+}
+
+.home .landingContainer .image-holder {
+  display: inline-block;
+  position: relative;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
 .home .landingContainer .text {
-  border: 1px solid blue;
   height: 20%;
+  margin-bottom: 2%;
+}
+
+.home .landingContainer .text div {
+  width: 100%;
+  color: #4C2A66;
+}
+
+@media screen and (max-width: 768px) {
+  .home .landingContainer .text {
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
 }
 
 .home .landingContainer .button {
-  border: 1px solid yellow;
   height: 15%;
 }
 
 @media screen and (max-width: 768px) {
-  .home {
-    height: calc(100vh - 30px - 25px);
-    margin-top: calc(30px + 25px);
+  .home .landingContainer .button {
+    margin-top: 5%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    height: calc(100vh - 19px - 25px);
+    margin-top: calc(19px + 25px);
+  }
+}
+
+.home .activitiesWindowLabel {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.home .activitiesWindowLabel div {
+  width: 100%;
+  color: #4C2A66;
+}
+
+.home .activitiesWindowTop {
+  width: 100%;
+  padding-bottom: 30px;
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .home .activitiesWindowTop {
+    padding-bottom: 0px;
+  }
+}
+
+.home .activitiesWindowBottom {
+  width: 100%;
+  margin-left: 0px;
+}
+
+.home .accommodationWindowLabel {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.home .accommodationWindowLabel div {
+  width: 100%;
+  color: #4C2A66;
+}
+
+.home .accommodationWindowTop {
+  width: 100%;
+  padding-bottom: 30px;
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .home .accommodationWindowTop {
+    padding-bottom: 0px;
+  }
+}
+
+.home .accommodationWindowBottom {
+  width: 100%;
+  margin-left: 0px;
+}
+
+.home img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  /* only if you want fixed height */
+  border-radius: 10px;
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.home img:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .home img {
+    padding-bottom: 20px;
+  }
+}
+
+.home .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  opacity: 1;
 }
 
 .searchPage {
   height: calc(100vh - 70px - 15px);
   margin-top: calc(70px + 15px);
+}
+
+.searchPage .purpletent {
+  height: 100px;
+  width: 100px;
+}
+
+.searchPage .jumbotext {
+  padding-left: 50px;
+  font-weight: 200;
 }
 
 .searchPage .row {
@@ -175,21 +323,23 @@
 }
 
 .searchPage .searchPageContainer .jumbo {
-  border: 1px solid black;
   height: 200px;
 }
 
-.searchPage .searchPageContainer .searchBarContainer {
-  border: 1px solid blue;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: 0%;
-  z-index: 9999;
-  background-color: white;
-  height: auto;
+.searchPage .searchPageContainer .searchBarContainerWrapper {
+  padding: 0%;
+  margin: -15px;
   position: -webkit-sticky;
   position: sticky;
   top: 56px;
+  z-index: 9999;
+}
+
+.searchPage .searchPageContainer .searchBarContainer {
+  padding: 1% 5%;
+  margin: 0%;
+  background-color: #EADCF5;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,13 +358,13 @@
 }
 
 .searchPage .searchPageContainer .resultsBanner {
-  border: 1px solid palegoldenrod;
   padding: 20px;
 }
 
 .searchPage .searchPageContainer .resultsBanner p {
-  padding: 0%;
-  margin: 0%;
+  padding: 0px;
+  padding-top: 20px;
+  margin: 0px;
 }
 
 .searchPage .searchPageContainer .resultsBanner .resultsNumber {
@@ -240,21 +390,21 @@
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults {
-  border: 1px solid red;
   width: 1000px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 0%;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer {
-  border: 1px solid lightseagreen;
   position: -webkit-sticky;
   position: sticky;
-  top: 108px;
+  top: 129px;
   z-index: 999;
   background-color: white;
   padding: 0%;
+  border-bottom: 1px solid lightgray;
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .labelFontsize {
@@ -278,7 +428,6 @@
           align-items: center;
   text-align: center;
   height: 40px;
-  border: 1px solid lightskyblue;
   color: #55ae68;
   background-color: #C3FFD0;
   font-weight: bold;
@@ -287,6 +436,8 @@
 @media screen and (max-width: 768px) {
   .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .filterLabel {
     height: 30px;
+    padding: 0%;
+    top: 0;
   }
 }
 
@@ -372,7 +523,6 @@
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .accommodation {
-  border: 1px solid #ffd493;
   height: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -381,8 +531,10 @@
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .accommodation.open {
   height: 285px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1);
+          transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -392,7 +544,6 @@
 }
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .activities {
-  border: 1px solid springgreen;
   height: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -401,8 +552,10 @@
 
 .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer .activities.open {
   height: 285px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1);
+          transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -465,19 +618,22 @@
           justify-content: flex-start;
 }
 
-.searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .resultsContainer {
-  border: 1px solid pink;
-}
-
 @media screen and (max-width: 768px) {
   .searchPage {
-    height: calc(100vh - 30px - 25px);
-    margin-top: calc(30px + 25px);
+    height: calc(100vh - 19px - 25px);
+    margin-top: calc(19px + 25px);
   }
 }
 
 .searchBar {
   width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+  .searchBar {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
 }
 
 .searchBar .col, .searchBar [class*="col-"] {
@@ -501,22 +657,11 @@
 
 .searchBar .borderBox {
   margin: 10px 0px;
-  border: 1px solid black;
+  border: 1px solid #5f3282;
   border-radius: 5px;
   width: 100%;
   height: 90%;
-}
-
-.searchBar .location {
-  border: 1px solid paleturquoise;
-}
-
-.searchBar .checkIn {
-  border: 1px solid palegreen;
-}
-
-.searchBar .checkOut {
-  border: 1px solid palegoldenrod;
+  background-color: white;
 }
 
 .searchBar .findButton {
@@ -530,14 +675,21 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border: 1px solid lightpink;
 }
 
 .searchBar .searchButton {
   font-size: 24px;
-  height: 40px;
+  height: 45px;
   padding: 0%;
   margin: 0%;
+  margin-bottom: 1%;
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .searchBar .searchButton {
+    height: 42px;
+  }
 }
 
 .pageLinker {
@@ -548,7 +700,7 @@
   height: 250px;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 1% 0%;
+  margin: 0% 0% 2% 0%;
   color: gray;
 }
 
@@ -653,7 +805,10 @@
 .searchBar #dropdown-custom-2 {
   color: #5AD576;
   background-color: white;
-  margin: 5% 5%;
+  margin: 5% 0%;
+  padding: 5px;
+  width: 40px;
+  height: 35px;
   border: 0px;
 }
 
@@ -741,7 +896,6 @@
 }
 
 .sitePage .sitePageContainer {
-  border: 1px solid red;
   margin-top: 105px;
 }
 
@@ -753,19 +907,17 @@
 
 .sitePage .country {
   width: 100%;
-  border: 1px solid #b383f5;
   color: #419dff;
 }
 
 .sitePage .title {
   width: 100%;
-  border: 1px solid paleturquoise;
+  margin-bottom: 3%;
 }
 
 .sitePage .miniNav {
   background-color: #F6EAFF;
   width: 100%;
-  border: 1px solid lightseagreen;
   text-align: center;
 }
 
@@ -809,17 +961,14 @@
   height: -moz-min-content;
   height: min-content;
   width: 100%;
-  border: 1px solid lightpink;
 }
 
 .sitePage .aboutSection .about {
   width: 100%;
-  border: 1px solid palegoldenrod;
 }
 
 .sitePage .aboutSection .description {
   width: 100%;
-  border: 1px solid lightgreen;
   color: gray;
 }
 
@@ -828,20 +977,15 @@
   height: -moz-min-content;
   height: min-content;
   width: 100%;
-  border: 1px solid lightyellow;
   margin: 0%;
 }
 
 .sitePage .accActLegend .accommodationLegend {
   width: 100%;
-  border: 1px solid palevioletred;
-  padding-left: 2%;
 }
 
 .sitePage .accActLegend .activitiesLegend {
   width: 100%;
-  border: 1px solid mediumpurple;
-  padding-left: 2%;
 }
 
 .sitePage .accActLegend #iconBox {
@@ -851,7 +995,11 @@
 
 .sitePage .availability {
   width: 100%;
-  border: 1px solid slategrey;
+}
+
+.sitePage .availability .availability-dates {
+  margin-top: 2%;
+  padding-bottom: 0%;
 }
 
 .sitePage .mapContainer {
@@ -867,7 +1015,6 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: red;
   overflow: hidden;
 }
 
@@ -876,5 +1023,62 @@
   position: relative !important;
   width: 70rem !important;
   height: 30rem !important;
+}
+
+@-webkit-keyframes articleCardFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes articleCardFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.footer {
+  background-color: #9f5ad5;
+  height: 100px;
+  width: 100%;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  -webkit-animation: flickerAnimation 5s infinite;
+  animation: flickerAnimation 5s infinite;
 }
 /*# sourceMappingURL=style.css.map */

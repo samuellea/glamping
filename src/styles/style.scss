@@ -15,7 +15,7 @@ $textColor: white;
 }
 
 $navbarHeight_desktop: 70px;
-$navbarHeight_mobile: 30px;
+$navbarHeight_mobile: 19px;
 
 @mixin flexCenter {
   display: flex;
@@ -38,6 +38,10 @@ $navbarHeight_mobile: 30px;
   &:active {
     background: rgb(150, 255, 175) !important;
   }
+}
+
+.findMineButton {
+  width: 400px;
 }
 
 .purpleTitle {
@@ -85,22 +89,33 @@ $navbarHeight_mobile: 30px;
           height: $navbarHeight_mobile;
         }
     }
+
     }
   }
 
   .navbar {
     background-color: #9f5ad5;
     // opacity: 0.5;
+    z-index: 99999;
     a, .navbar-brand, .navbar-nav .nav-link {
+      text-decoration: none !important;
       color: $textColor;
       padding-top: 0;
+      line-height: 500px;
       &:hover {
-        color: red;
+        color:#4C2A66;
       }
-      @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 768px) {
+      a, .navbar-nav .nav-link {
+        margin-top: 2.75%;
+        margin-bottom: 2%;
+  
         line-height: $navbarHeight_mobile;
         height: $navbarHeight_mobile;
+
       }
+
     }
     .navbarIcon {
       font-size: 2rem;
@@ -108,44 +123,93 @@ $navbarHeight_mobile: 30px;
     }
     .navbarOption {
       @include flexCenter;
+      justify-content: flex-end;
     }
 
-
-
   }
 
-  .navbarTogglez {
-    color: red;
-  }
+  // .navbarTogglez {
+  //   color: red;
+  // }
 
 ////////// HOME PAGE
 
   .home {
+
     height: calc(100vh - #{$navbarHeight_desktop} - 15px);
     margin-top: calc(#{$navbarHeight_desktop} + 15px);
 
     .landingContainer {
-      background-color: rgb(255, 211, 195);
       padding: 2.5% 5% 2%;
-      height: 100%;
+      // height: 100%;
 
       .row {
         @include flexCenter;
       }
 
-      .pic {
-        border: 1px solid red;    
+      .pic { 
         height: 65%;
+        position: relative;
+        margin-bottom: 2%;
+    @media screen and (max-width: 768px) {
+      margin-top: 5%;
+ 
+    }
       }
+
+      .homegif {
+        width: 475px;
+        height: auto;
+        filter: hue-rotate(60deg);
+        margin: 0%;
+        margin: 0%;
+      }
+
+      .image-holder {
+        display:inline-block;
+        position: relative;
+        filter: brightness(90%);
+    }
+
+    // .image-holder:after {
+    //     content:'';
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 10;
+    //     width: 475px;
+    //     height: 100%;
+    //     display: block;
+    //     position: absolute;
+    //     background: #371f4b;
+    //     border-radius: 10px;
+    //     // background-color: red;
+    //     opacity: 0.15;
+    // }
+
+    // .image-holder:hover:before {
+    //     opacity: 0;
+    // }
   
       .text {
-        border: 1px solid blue;    
         height: 20%; 
+        margin-bottom: 2%;
+        div {
+          width: 100%;
+          color: #4C2A66;
+        }
+        @media screen and (max-width: 768px) {
+          margin-top: 10%;
+        margin-bottom: 0%;
+
+        }
       }
   
       .button {
-        border: 1px solid yellow;      
+        // border: 1px solid yellow;      
         height: 15%; 
+        @media screen and (max-width: 768px) {
+          margin-top: 5%;
+        }
       }
     }
 
@@ -153,12 +217,99 @@ $navbarHeight_mobile: 30px;
       height: calc(100vh - #{$navbarHeight_mobile} - 25px);
       margin-top: calc(#{$navbarHeight_mobile} + 25px);
     }
+    
+
+    .activitiesWindowLabel {
+      padding-top: 50px;
+      padding-bottom: 25px;
+      div {
+        width: 100%;
+        color: #4C2A66;
+      }
+    }
+
+    .activitiesWindowTop {
+      width: 100%;
+      padding-bottom: 30px;
+      margin-left: 0px;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 0px;
+      }
+    }
+
+    .activitiesWindowBottom {
+      width: 100%;
+      margin-left: 0px;
+    }
+
+    .accommodationWindowLabel {
+      padding-top: 50px;
+      padding-bottom: 25px;
+      div {
+        width: 100%;
+        color: #4C2A66;
+      }
+    }
+
+    .accommodationWindowTop {
+      width: 100%;
+      padding-bottom: 30px;
+      margin-left: 0px;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 0px;
+      }
+    }
+
+    .accommodationWindowBottom {
+      width: 100%;
+      margin-left: 0px;
+    }
+
+
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 300px; /* only if you want fixed height */
+      // opacity: 0.5;
+      border-radius: 10px;
+      filter: brightness(75%);
+      transition: 1.5s;
+      &:hover {
+      filter: brightness(110%);
+        transition: 0.5s;
+      }
+      @media screen and (max-width: 768px) {
+        padding-bottom: 20px;
+      }
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 30px;
+      color: white;
+      opacity:1;
+    }
 
   }
 
   ////////// SEARCH PAGE
 
   .searchPage {
+
+    .purpletent {
+      height: 100px;
+      width: 100px;
+    }
+
+    .jumbotext {
+      padding-left: 50px;
+      font-weight: 200;
+    }
 
     height: calc(100vh - #{$navbarHeight_desktop} - 15px);
     margin-top: calc(#{$navbarHeight_desktop} + 15px);
@@ -169,25 +320,34 @@ $navbarHeight_mobile: 30px;
 
     .searchPageContainer {
       border: 1px solid lightgrey;
+      // background-color:#EADCF5;
+
       // margin: 0;
-      // padding: 0;
+      // padding: 0%;
 
     .jumbo {
-      border: 1px solid black;
+      // border: 1px solid black;
       height: 200px;
     }
 
-    .searchBarContainer {
-      border: 1px solid blue;
-      padding-left: 5%;
-      padding-right: 5%;
-
-      margin: 0%;
-      z-index: 9999;
-      background-color: white;
-      height: auto;
+    .searchBarContainerWrapper {
+      // width: 100%;
+      padding: 0%;
+      margin: -15px;
       position: sticky;
       top: 56px;
+      z-index: 9999;
+    }
+
+    .searchBarContainer {
+      // border: 1px solid blue;
+      padding: 1% 5%;
+
+      margin: 0%;
+  
+      background-color:#EADCF5;
+      height: auto;
+   
       display: flex;
       justify-content: center;
       align-items: center;
@@ -197,21 +357,16 @@ $navbarHeight_mobile: 30px;
     }
 
     .resultsBanner {
-      border: 1px solid palegoldenrod;
+      // border: 1px solid palegoldenrod;
       padding: 20px;
       p {
-        padding: 0%;
-        margin: 0%;
+        padding: 0px;
+        padding-top: 20px;
+        margin: 0px;
       }
       .resultsNumber {
         color: #5AD576;
         font-weight: 900;
-      }
-      .resultsText {
-
-      }
-      .resultsCountry {
-
       }
       .resultsEnd {
         color: #5AD576;
@@ -222,18 +377,18 @@ $navbarHeight_mobile: 30px;
       @include flexCenter;
 
     .filterAndResults {
-      border: 1px solid red;
       width: 1000px;
       align-items: flex-start;
-
+      margin: 0%;
+// padding: 0%;
       .filterContainer{
-        border: 1px solid lightseagreen;
         position: sticky;
-        top: 108px;
+        top: 129px;
         z-index: 999;
         background-color: white;
         padding: 0%;
 
+        border-bottom: 1px solid lightgray;
         .labelFontsize {
           font-size: 18px;
         }
@@ -251,12 +406,13 @@ $navbarHeight_mobile: 30px;
         .filterLabel{
       @include flexCenter;
       height: 40px;
-          border: 1px solid lightskyblue;
           color: rgb(85, 174, 104);
           background-color: #C3FFD0;
           font-weight: bold;
           @media screen and (max-width: 768px) {
-            height: 30px;            
+            height: 30px; 
+            padding: 0%;
+            top: 0;           
           }
         }
 
@@ -313,13 +469,13 @@ $navbarHeight_mobile: 30px;
         }
 
         .accommodation{
-          border: 1px solid rgb(255, 212, 147);
           height: 40px;
           transition: 0.2s;
           overflow: hidden;
           &.open {
             height: 285px;
-            transition: 0.2s;
+            transition: all 0.4s;
+            transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1.0);
             }
             @media screen and (max-width: 768px) {
               height: 30px;            
@@ -327,13 +483,13 @@ $navbarHeight_mobile: 30px;
         }
 
         .activities{
-          border: 1px solid springgreen;
           height: 40px;
           transition: 0.2s;
           overflow: hidden;
           &.open {
             height: 285px;
-            transition: 0.2s;
+            transition: all 0.4s;
+            transition-timing-function: cubic-bezier(0.01, 0.1, 0.5, 1.0);
             }
             @media screen and (max-width: 768px) {
               height: 30px;            
@@ -370,7 +526,7 @@ $navbarHeight_mobile: 30px;
       }
 
       .resultsContainer {
-        border: 1px solid pink;
+        // border: 1px solid pink;
       }
     }
   }
@@ -395,6 +551,12 @@ $navbarHeight_mobile: 30px;
 
     width: 100vw;
 
+    @media screen and (max-width: 768px) {
+        margin-top: 2px;
+    margin-bottom: 2px;
+    }
+
+
     .col, [class*="col-"] {
       height: 50px;
       @include flexCenter;
@@ -405,36 +567,40 @@ $navbarHeight_mobile: 30px;
 
     .borderBox {
       margin: 10px 0px;
-      border: 1px solid black;
+      border: 1px solid #5f3282;
       border-radius: 5px;
       width: 100%;
       height: 90%;
+      background-color: white;
     }
 
     .location {
-      border: 1px solid paleturquoise;
-      // width: 100%;
-
+      // border: 1px solid paleturquoise;
     }
 
     .checkIn {
-      border: 1px solid palegreen;
+      // border: 1px solid palegreen;
     }
 
     .checkOut {
-      border: 1px solid palegoldenrod;
+      // border: 1px solid palegoldenrod;
     }
 
     .findButton {
       @include flexCenter;
-      border: 1px solid lightpink;
+      // border: 1px solid lightpink;
     }
     .searchButton {
       font-size: 24px;
-      height: 40px;
+      height: 45px;
       padding: 0%;
       margin: 0%;
+      margin-bottom: 1%;
+      width: 80%;
 
+      @media screen and (max-width: 768px) {
+        height: 42px;
+      }
     }
   }
 
@@ -452,7 +618,7 @@ $navbarHeight_mobile: 30px;
     height: $resultCardHeight_desktop;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    margin: 1% 0%;
+    margin: 0% 0% 2% 0%;
     color: gray;
 
     
@@ -560,7 +726,10 @@ $navbarHeight_mobile: 30px;
   #dropdown-custom-2 {
       color:#5AD576;
       background-color:white;
-      margin: 5% 5%;
+      margin: 5% 0%;
+      padding: 5px;
+      width: 40px;
+      height: 35px;
       // margin-left: 50%;
       border: 0px;
       &:hover {
@@ -644,7 +813,7 @@ $navbarHeight_mobile: 30px;
   //   }
 
   .sitePageContainer {
-    border: 1px solid red;
+    // border: 1px solid red;
     margin-top: $navbarHeight_desktop + 35px;
           @media screen and (max-width: 768px) {
             margin-top: $navbarHeight_desktop + 0px;
@@ -661,20 +830,20 @@ $navbarHeight_mobile: 30px;
 
   .country {
     width: 100%;
-    border: 1px solid rgb(179, 131, 245);
     color: rgb(65, 157, 255)
   }
 
   .title {
     width: 100%;
-    border: 1px solid paleturquoise;
+    // border: 1px solid paleturquoise;
+    margin-bottom: 3%;
   }
 
   .miniNav {
     // height: 50px;
     background-color: #F6EAFF;
     width: 100%;
-    border: 1px solid lightseagreen;
+    // border: 1px solid lightseagreen;
     text-align: center;
 
     // .nav {
@@ -714,16 +883,16 @@ $navbarHeight_mobile: 30px;
   .aboutSection {
     height: min-content;
     width: 100%;
-    border: 1px solid lightpink;
+    // border: 1px solid lightpink;
     .about {
       // height: 50px;
       width: 100%;
-      border: 1px solid palegoldenrod;
+      // border: 1px solid palegoldenrod;
     }
     .description {
       // height: min-content;
       width: 100%;
-      border: 1px solid lightgreen;
+      // border: 1px solid lightgreen;
       color: gray;
     }
   }
@@ -731,19 +900,19 @@ $navbarHeight_mobile: 30px;
   .accActLegend {
     height: min-content;
     width: 100%;
-    border: 1px solid lightyellow;
+    // border: 1px solid lightyellow;
     margin: 0%;
     .accommodationLegend {
       // height: 50px;
       width: 100%;
-      border: 1px solid palevioletred;
-      padding-left: 2%;
+      // border: 1px solid palevioletred;
+      // padding-left: 2%;
     }
     .activitiesLegend {
       // height: 50px;
       width: 100%;
-      border: 1px solid mediumpurple;
-      padding-left: 2%;
+      // border: 1px solid mediumpurple;
+      // padding-left: 2%;
     }
     #iconBox {
       // background-color: red;
@@ -755,7 +924,7 @@ $navbarHeight_mobile: 30px;
   .availability {
     // height: 50px;
     width: 100%;
-    border: 1px solid slategrey;
+    // border: 1px solid slategrey;
 
   
 
@@ -769,6 +938,8 @@ $navbarHeight_mobile: 30px;
 
 
     .availability-dates {
+      margin-top: 2%;
+      padding-bottom: 0%;
 
     }
   }
@@ -781,7 +952,6 @@ $navbarHeight_mobile: 30px;
     @include flexCenter;
     width: 100%;
     height: 100%;
-    background-color: red;
     overflow: hidden;
   }
 }
@@ -795,10 +965,57 @@ $navbarHeight_mobile: 30px;
 
 
 
+//  @keyframes articleCardFade {
+//   from {
+//     transform: translateX(2.5vw);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
+
+@keyframes articleCardFade {
+  from {
+    // transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 
 
+////////// FOOTER
 
+.footer {
+  background-color: #9f5ad5;
+  height: 100px;
+  width: 100%;
+}
 
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
 
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
 
-
+.animate-flicker {
+  -webkit-animation: flickerAnimation 5s infinite;
+  -moz-animation: flickerAnimation 5s infinite;
+  -o-animation: flickerAnimation 5s infinite;
+   animation: flickerAnimation 5s infinite;
+}

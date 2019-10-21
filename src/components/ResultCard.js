@@ -9,16 +9,17 @@ import { Link } from "@reach/router";
 const ResultCard = ({ result, index }) => {
   console.log(result, '<------')
   const areaFirstCaps = result.area.split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+  let fadeDelay = 300 * (index + 2)
   return (
     <Link to={`/sites/${result.id}`} style={{ textDecoration: 'none' }}>
 
-      <Row className="resultCard" >
+      <Row className="resultCard" style={{ animation: `articleCardFade ${fadeDelay}ms ease-in-out 0s both` }} >
         <Col xs={12} md={6} className="pictureContainer">
           <Image src={`${result.siteImgs[0]}`} className="picture" />
         </Col>
         <Col xs={12} md={6} className="infoContainer">
-          <div className="nameContainer">
-            <h3>{areaFirstCaps}</h3>
+          <div className="nameContainer purpleTitle h3">
+            <p>{areaFirstCaps}</p>
           </div>
           <div className="descriptionContainer">
             <p>{result.description}</p>

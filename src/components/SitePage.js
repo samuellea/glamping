@@ -97,12 +97,12 @@ class SitePage extends Component {
             </Carousel.Item>
           </Carousel>
 
-          <div className="country my-2">
+          <div className="country h5 mt-3">
             <span>{country}</span>
-            <span style={{ float: 'right' }}>Back to search</span>
+            {/* <span style={{ float: 'right' }}>Back to search</span> */}
           </div>
 
-          <div className="title h1 my-3 purpleTitle">
+          <div className="title h1 purpleTitle">
             {areaFirstCaps}
           </div>
 
@@ -171,7 +171,7 @@ class SitePage extends Component {
           </Row>
 
           <div className="availability mb-5 mt-4" id="availability">
-            <div className="availability-title h4 mt-4 purpleTitle">
+            <div className="availability-title h2 mt-4 purpleTitle">
               Availability
             </div>
             <div className="availability-dates md-h1 h3 text-success">

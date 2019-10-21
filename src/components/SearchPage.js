@@ -5,7 +5,9 @@ import Col from 'react-bootstrap/Col';
 import SearchBar from './SearchBar';
 import Filter from './Filter';
 import ResultsList from './ResultsList';
+import Footer from './Footer';
 import * as api from './api';
+import Purpletent from '../assets/camping-tent-purp.svg';
 
 class SearchPage extends Component {
 
@@ -59,18 +61,25 @@ class SearchPage extends Component {
 
   render() {
     const { filterTerms, filteredResults } = this.state;
+
     return (
       <div className="searchPage">
         <Container className="searchPageContainer" >
 
           <Row className="jumbo">
-            JUMBO
-          </Row>
+            {/* JUMBO */}
+            <img src={Purpletent} class="card-img-top img-fluid purpletent" />
+            <p className="jumbotext h4 animate-flicker">Homes away from home</p>
 
 
-          <Row className="searchBarContainer">
-            <SearchBar receiveSearchResults={this.receiveSearchResults} />
           </Row>
+
+          <div className="searchBarContainerWrapper">
+            <Row className="searchBarContainer ">
+              <SearchBar receiveSearchResults={this.receiveSearchResults} />
+            </Row>
+          </div>
+
 
 
           <Row className="resultsBanner font-weight-bold h3">
@@ -85,13 +94,13 @@ class SearchPage extends Component {
 
                 </p>
                 :
-                <p>0 result :(</p>
+                <p>No glampsites match your criteria.</p>
             }
           </Row>
 
           <div className="filterAndResultsContainer">
             <Row className="filterAndResults">
-              <Col xs={12} md={4} className="filterContainer">
+              <Col xs={12} md={4} className="filterContainer no-gutters">
                 <Filter updateFilterTerms={this.updateFilterTerms} clearFilterTerms={this.clearFilterTerms} />
               </Col>
               <Col xs={12} md={8} className="resultsContainer">
@@ -100,8 +109,8 @@ class SearchPage extends Component {
             </Row>
           </div>
 
-
         </Container>
+
       </div>
     )
   }
