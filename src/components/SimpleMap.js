@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import { api_key } from '../config';
 
 class SimpleMap extends Component {
   render() {
-    console.log(api_key);
+    console.log(process.env.REACT_APP_GOOGLE_MAPS)
     const { lat, long } = this.props;
     const mapStyles = {
       width: '100%',
@@ -31,7 +30,8 @@ class SimpleMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: api_key
+  // apiKey: process.env.REACT_APP_GOOGLE_MAPS
+  apiKey: 'AIzaSyA4ohUdrrzcPu-qGcEmrfdnwGwHhHZncQU'
 })(SimpleMap);
 
 // import React, { Component } from 'react';
