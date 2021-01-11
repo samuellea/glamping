@@ -13,7 +13,7 @@ import Caravan from '../assets/Caravan.jpeg';
 import Commune from '../assets/Commune.jpeg';
 import Hobbithole from '../assets/hobbithole.jpeg';
 import Shepherdhut from '../assets/shepherdhut.jpeg';
-import Yurt from '../assets/Yurt.jpg';
+import Yurt from '../assets/Yurt.jpeg';
 
 import Hiking from '../assets/hiking.jpeg';
 import Music from '../assets/music.jpeg';
@@ -43,8 +43,8 @@ class Home extends Component {
 
           <Row className="text font-weight-bold h3">
             <div>We've been helping users find their</div>
-            <div>dream getaways since 2019</div>
-            <div style={{ color: '#9f5ad5' }}>#NorthcodersGlamping</div>
+            <div>dream getaways since 2021</div>
+            <div style={{ color: '#9f5ad5' }}>#BoutiqueGlamping</div>
           </Row>
           <Row className="button">
             <Link to={"/search"}>

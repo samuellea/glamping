@@ -27,7 +27,7 @@ class NavigationBar extends Component {
       <div className={`${this.state.navbarClass}`}>
         <Navbar expand="lg" fixed="top" variant="dark">
           <Link to={"/"}>
-            <Navbar.Brand className="roundTitle"><span style={{ color: '#4C2A66' }}>Northcoders</span><span style={{ color: 'white' }}>Glamping</span></Navbar.Brand>
+            <Navbar.Brand className="roundTitle"><span style={{ color: '#4C2A66' }}>Boutique</span><span style={{ color: 'white' }}>Glamping</span></Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbarTogglez" />
           <Navbar.Collapse id="basic-navbar-nav" >
