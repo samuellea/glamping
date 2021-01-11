@@ -17,7 +17,7 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
