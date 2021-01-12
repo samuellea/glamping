@@ -299,6 +299,12 @@
   .home img {
     padding-bottom: 20px;
   }
+
+  .searchPage {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
 }
 
 .home .centered {
@@ -316,6 +322,10 @@
 .searchPage {
   height: calc(100vh - 70px - 15px);
   margin-top: calc(70px + 15px);
+  /* width: 100vw; */
+  /* width: 100%;
+  height: 100%;
+  overflow-x: hidden; */
 }
 
 .searchPage .purpletent {
@@ -378,6 +388,35 @@
   .searchPage .searchPageContainer .searchBarContainer {
     padding: 0%;
   }
+
+  .searchPage .searchPageContainer .searchBarContainerWrapper {
+    padding: 0%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    z-index: 9999;
+    /* border: 3px solid green; */
+  }
+
+  .searchPage .searchPageContainer .filterAndResultsContainer .filterAndResults .filterContainer {
+    position: relative;
+    top: 84px !important;
+    width:100%;
+    z-index:100;
+    /* border: 3px solid blue; */
+    border-bottom: 1px solid purple;
+  }
+
+  .jumbo {
+    /* border: 2px solid blue; */
+    /* height: 400px !important; */
+  }
+
+  .searchPage .jumbotext {
+    padding-left: 6px;
+    font-size: 16px;
+  }
+
 }
 
 .searchPage .searchPageContainer .resultsBanner {
@@ -767,10 +806,29 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .resultCard {
+    height: 100% !important;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 0% 0% 2% 0%;
+    color: gray;
+  }
+
+  .resultCard p {
+    margin: 0px;
+  }
+
   .resultCard .infoContainer .descriptionContainer {
     height: 60px;
   }
+  
+  .resultCard .infoContainer .nameContainer {
+    margin: 0px !important;
+  }
+
 }
+
 
 .resultCard .infoContainer .descriptionContainer p {
   display: -webkit-box;
@@ -800,10 +858,14 @@
     padding: 0px 3%;
   }
   .resultCard .infoContainer .descriptionContainer {
-    margin: 5px 0% 15px;
+    /* margin: 5px 0% 15px; */
   }
   .resultCard .infoContainer .descriptionContainer p {
     -webkit-line-clamp: 2;
+  }
+  .resultCard .infoContainer .buttonContainer {
+    position: relative;
+    bottom: 10px;
   }
 }
 
@@ -834,6 +896,15 @@
   color: black;
   background-color: white;
   border: 0px;
+}
+
+.dropdown {
+  /* position: relative;  */
+  /* top: 100px; */
+}
+
+.dropdown-menu {
+  /* border: 3px solid green; */
 }
 
 .searchBar #dropdown-custom-2 {
@@ -867,8 +938,8 @@
   height: 100%;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  -ms-grid-columns: 1fr 30%;
-      grid-template-columns: 1fr 30%;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
 }
 
 .searchBar .calendarInput .left {
@@ -887,6 +958,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
+  /* border: 2px solid blue; */
 }
 
 .searchBar .calendarInput .right {
@@ -983,11 +1055,42 @@
   width: 100%;
 }
 
+.accActLegend {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.accActLegend p {
+  margin: 10px 0px;
+}
+
 @media screen and (max-width: 768px) {
   .sitePage .miniNav .bookButton {
     width: 100%;
     height: 115%;
   }
+
+  .DayPicker {
+    /* font-size: 11px; */
+    /* width: 50vw; */
+    /* position: relative;
+    bottom: 20px; */
+    /* padding: auto; */
+  }
+
+  .dropdown {
+  }
+  
+  .dropdown-menu {
+    /* border: 3px solid green; */
+  }
+
+  .accommodationLegend {
+    margin-bottom: 20px;
+  }
+
 }
 
 .sitePage .aboutSection {

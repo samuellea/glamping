@@ -138,7 +138,7 @@ class SitePage extends Component {
           </div>
 
           <Row className="accActLegend mt-3 mb-5">
-            <Col className="accommodationLegend" xs={6} md={4}>
+            <Col className="accommodationLegend" xs={12} md={4}>
               <div className="purpleTitle h3 accommodationSubheading pb-2">Accommodation</div>
               {
                 pitches.map(pitch => {
@@ -153,7 +153,7 @@ class SitePage extends Component {
                 })
               }
             </Col>
-            <Col className="activitiesLegend" xs={6} md={4}>
+            <Col className="activitiesLegend" xs={12} md={4}>
               <div className="purpleTitle h3 activitiesSubheading pb-2">Activities</div>
               {
                 activities.map(activity => {
@@ -193,6 +193,7 @@ class SitePage extends Component {
 
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     const { id } = this.props;
     api.getSiteById(id).then((site) => {
       this.setState({

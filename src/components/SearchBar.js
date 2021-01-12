@@ -68,6 +68,7 @@ class SearchBar extends Component {
 
     return (
       <Row className="searchBar">
+
         <Col xs={6} md={3} className="location" >
           <div className="borderBox">
             <Dropdown variant="danger" style={{ width: '100%', height: "100%" }}>
@@ -93,15 +94,8 @@ class SearchBar extends Component {
           <div className="borderBox">
 
             <div className="calendarInput">
+
               <div className="left">
-                {
-                  checkIn == null ?
-                    <span>Any date</span>
-                    :
-                    <span>{`${dateFnsFormat(new Date(this.state.checkIn), FORMAT)}`}</span>
-                }
-              </div>
-              <div className="right">
                 <Dropdown >
                   <Dropdown.Toggle id="dropdown-custom-2">
                     <i class="fas fa-calendar-day fa-lg"></i>
@@ -121,6 +115,15 @@ class SearchBar extends Component {
                 </Dropdown>
               </div>
 
+              <div className="right">
+                {
+                  checkIn == null ?
+                    <span>Any date</span>
+                    :
+                    <span>{`${dateFnsFormat(new Date(this.state.checkIn), FORMAT)}`}</span>
+                }
+              </div>
+
             </div>
 
           </div>
@@ -132,15 +135,6 @@ class SearchBar extends Component {
             <div className="calendarInput">
 
               <div className="left">
-
-                {
-                  checkIn == null ?
-                    <span>Any date</span>
-                    :
-                    <span>{`${dateFnsFormat(new Date(this.state.checkOut), FORMAT)}`}</span>
-                }
-              </div>
-              <div className="right">
 
                 <Dropdown>
                   <Dropdown.Toggle id="dropdown-custom-2">
@@ -159,6 +153,19 @@ class SearchBar extends Component {
                     />
                   </Dropdown.Menu>
                 </Dropdown>
+
+
+              </div>
+
+              <div className="right">
+
+                {
+                  checkIn == null ?
+                    <span>Any date</span>
+                    :
+                    <span>{`${dateFnsFormat(new Date(this.state.checkOut), FORMAT)}`}</span>
+                }
+
               </div>
 
             </div>

@@ -31,6 +31,7 @@ class ResultsList extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     api.getResults().then(results => {
       this.setState({
         results: results,
