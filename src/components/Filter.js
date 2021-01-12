@@ -39,7 +39,6 @@ class Filter extends Component {
   }
 
   handleMenuClick = (value) => {
-    console.log('handleMenuClick!')
     const { accommodationMenu, activitiesMenu } = this.state;
     // const { target: { value } } = event
     if (value === 'accommodation') {
@@ -161,9 +160,6 @@ class Filter extends Component {
     )
   }
 
-  componentDidUpdate() {
-    console.log('Filter UPDATED')
-  }
 }
 
 export default Filter;

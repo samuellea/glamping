@@ -7,8 +7,6 @@ const request2 = axios.create({ baseURL: 'https://api.postcodes.io/postcodes/' }
 export const getResults = (location, checkIn, checkOut) => {
   return request1.get('/sites').then(({ data }) => {
     let refinedResults = [...data];
-    console.log(location, ' <-- api.js')
-    console.log(refinedResults, '**** BEFORE');
     if (location !== 'Any Location' && location !== undefined) {
       refinedResults = refinedResults.filter(site => site.country == location);
     }
@@ -18,7 +16,6 @@ export const getResults = (location, checkIn, checkOut) => {
     if (checkOut !== null && checkIn !== undefined) {
       refinedResults = refinedResults.filter(site => Date.parse(site.bookingsClose) > Date.parse(checkOut))
     }
-    console.log(refinedResults, '**** AFTER');
     return refinedResults;
   })
 }

@@ -55,8 +55,6 @@ class SearchBar extends Component {
     }
 
     const locationClicker = (location) => {
-      console.log('!')
-      console.log(location)
       this.setState({
         location: location
       })

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 function MyComponent(props) {
-  console.log(props, ' ***')
   const containerStyle = {
     width: '100vw',
     height: '50vh'

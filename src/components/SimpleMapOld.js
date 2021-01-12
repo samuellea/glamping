@@ -3,7 +3,6 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 class SimpleMap extends Component {
   render() {
-    console.log(process.env.REACT_APP_GOOGLE_MAPS)
     const { lat, long } = this.props;
     const mapStyles = {
       width: '100%',
@@ -30,63 +29,5 @@ class SimpleMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCjrB3w6LNwgCcL_MBfIyL7sFTw15aqeaE'
+  apiKey: 'API KEY GOES HERE' // defunct, has been changed
 })(SimpleMap);
-
-// import React, { Component } from 'react';
-// import GoogleMapReact from 'google-map-react';
-
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-// class SimpleMap extends Component {
-
-//   state = {
-//     center: {
-//       lat: '54.400864',
-//       long: '-2.96611'
-//     }
-//   }
-
-//   static defaultProps = {
-//     center: {
-//       lat: this.props.lat,
-//       lng: this.props.long
-//     },
-//     zoom: 11
-//   };
-
-//   render() {
-//     console.log(this.props, '<---')
-//     return (
-//       // Important! Always set the container height explicitly
-//       <div style={{ height: '50vh', width: '50%' }}>
-//         <GoogleMapReact
-//           bootstrapURLKeys={{ key: 'AIzaSyABmoMZcZje1cywQwARC6Xv9rw0KMYiFPQ' }}
-//           defaultCenter={this.props.center}
-//           defaultZoom={this.props.zoom}
-//         // center={this.state.center}
-//         >
-//           <AnyReactComponent
-//             lat={this.state.center.lat}
-//             lng={this.state.center.long}
-//             text="My Marker"
-//           />
-//         </GoogleMapReact>
-//       </div>
-//     );
-//   }
-
-//   componentDidMount() {
-//     const { lat, long } = this.props;
-//     console.log(lat);
-//     console.log(long, '*');
-//     this.setState({
-//       center: {
-//         lat: lat,
-//         long: long
-//       }
-//     })
-//   }
-// }
-
-// export default SimpleMap;

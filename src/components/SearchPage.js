@@ -43,16 +43,13 @@ class SearchPage extends Component {
   }
 
   clearFilterTerms = () => {
-    console.log('reaching clearFilterTerms');
     this.setState({
       filterTerms: []
     })
   }
 
   receiveSearchResults = (refinedResults, location) => {
-    console.log('reaching performSearch')
     if (location === 'Any Location') location = 'any location';
-    console.log(refinedResults, '!');
     this.setState({
       results: refinedResults,
       location: location
@@ -125,7 +122,6 @@ class SearchPage extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('searchPage UPDATED ///////////////////////')
     const filterChange = (prevState.filterTerms !== this.state.filterTerms);
     const resultsChange = (prevState.results !== this.state.results)
     const { results, filterTerms } = this.state;

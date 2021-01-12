@@ -7,7 +7,6 @@ import { Link } from "@reach/router";
 
 
 const ResultCard = ({ result, index }) => {
-  console.log(result, '<------')
   const areaFirstCaps = result.area.split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
   let fadeDelay = 300 * (index + 2)
   return (
