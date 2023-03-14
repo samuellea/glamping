@@ -34,7 +34,7 @@ class SitePage extends Component {
     // const availableFrom = new Date(bookingsOpen).toString();
     const availableFrom = new Date(bookingsOpen).toLocaleDateString(undefined, { month: "long", day: "numeric" })
     const availableUntil = new Date(bookingsClose).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
-
+    console.log('availableFrom: ' + availableFrom, ' <<<<')
     const iconReference = {
       'water sports': 'fas fa-swimmer',
       'hiking': 'fas fa-hiking',
@@ -123,7 +123,9 @@ class SitePage extends Component {
                 </Nav>
               </Col>
               <Col md={3} xs={12} style={{ width: '100%' }}>
-                <button className="greenButton bookButton" onClick={() => alert("CONGRATION - U DONE IT")}>BOOK NOW</button>
+                <a href="mailto:booking.enquiries@nonexistant.com">
+                  <button className="greenButton bookButton">BOOK NOW</button>
+                </a>
               </Col>
             </Row>
           </div>

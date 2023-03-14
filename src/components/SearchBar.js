@@ -14,8 +14,8 @@ class SearchBar extends Component {
     checkIn: null,
     checkOut: null,
     location: 'Any Location',
-    checkInMonth: 0,
-    checkOutMonth: 0
+    checkInMonth: 2,
+    checkOutMonth: 2
   };
 
   render() {
@@ -102,7 +102,7 @@ class SearchBar extends Component {
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <DayPicker
-                      month={new Date(2021, this.state.checkInMonth)}
+                      month={new Date(2023, this.state.checkInMonth)}
                       onDayClick={(day) => handleCheckInClick(day)}
                       selectedDays={new Date(this.state.checkIn)}
                       disabledDays={[
@@ -142,7 +142,7 @@ class SearchBar extends Component {
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <DayPicker
-                      month={new Date(2021, this.state.checkOutMonth)}
+                      month={new Date(2023, this.state.checkOutMonth)}
                       onDayClick={(day) => handleCheckOutClick(day)}
                       selectedDays={new Date(this.state.checkOut)}
                       disabledDays={[

@@ -43,7 +43,7 @@ class Home extends Component {
 
           <Row className="text font-weight-bold h3">
             <div>We've been helping users find their</div>
-            <div>dream getaways since 2021</div>
+            <div>dream getaways since 2023</div>
             <div style={{ color: '#9f5ad5' }}>#BoutiqueGlamping</div>
           </Row>
           <Row className="button">
@@ -94,9 +94,8 @@ class Home extends Component {
           </Row>
 
           <Row className="accommodationWindowLabel font-weight-bold h3">
-            <div>Accommodation to suit</div>
-            <div style={{ color: '#9f5ad5' }}>any propensity for in-
-            <span style={{ fontStyle: 'italic' }}>tents</span>-ity...</div>
+            <div>Accommodation to suit you - </div>
+            <div style={{ color: '#9f5ad5' }}>adventurous, fabulous and everything in-between...</div>
           </Row>
 
           <Row className="accommodationWindowTop">
