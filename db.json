@@ -4,189 +4,117 @@
       "id": 1,
       "country": "England",
       "area": "the lakes",
-      "activities": [
-        "water sports",
-        "hiking",
-        "villages"
-      ],
+      "activities": ["water sports", "hiking", "villages"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor magna eget est lorem. Felis eget nunc lobortis mattis aliquam. Curabitur gravida arcu ac tortor. Ac placerat vestibulum lectus mauris ultrices. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Aliquet sagittis id consectetur purus ut faucibus pulvinar. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Lectus vestibulum mattis ullamcorper velit.",
-      "pitches": [
-        "camping",
-        "yurts",
-        "caravans",
-        "shepherd huts"
-      ],
-      "bookingsOpen": "2023-03-01T00:00:00.000Z",
-      "bookingsClose": "2023-08-31T23:00:00.000Z",
+      "pitches": ["camping", "yurts", "caravans", "shepherd huts"],
+      "bookingsOpen": "2025-03-01T00:00:00.000Z",
+      "bookingsClose": "2025-08-31T23:00:00.000Z",
       "postCode": "LA22 0JA",
       "siteImgs": [
-        "https://keswickadventures.co.uk/wp-content/uploads/2021/08/lake-district-mountain-web.jpg",
-        "https://static.trip101.com/paragraph_media/pictures/002/566/894/large/7e531835-1730-49f1-9325-10b1ea5a57ca.jpg?1640077655",
-        "https://goglamping.net/app/web/upload/small/glamping-holidays-lake-district-cumbria-northern-england-wild-in-style-403-3725.jpg"
+        "lakeDistrict_1.jpg",
+        "lakeDistrict_2.png",
+        "lakeDistrict_3.jpg"
       ]
     },
     {
       "id": 2,
       "country": "Ireland",
       "area": "the shire",
-      "activities": [
-        "hiking",
-        "questing",
-        "elevenses"
-      ],
+      "activities": ["hiking", "questing", "elevenses"],
       "description": "Elementum nibh tellus molestie nunc non blandit massa enim nec. Urna duis convallis convallis tellus. Consequat ac felis donec et odio pellentesque diam. Morbi tristique senectus et netus et malesuada fames. Risus feugiat in ante metus dictum at tempor commodo. Volutpat diam ut venenatis tellus in metus. Risus viverra adipiscing at in tellus. Vitae auctor eu augue ut. In metus vulputate eu scelerisque felis imperdiet. Urna porttitor rhoncus dolor purus non enim praesent elementum. Rhoncus mattis rhoncus urna neque viverra justo nec.",
-      "pitches": [
-        "hobbit holes",
-        "elven ruins"
-      ],
-      "bookingsOpen": "2023-03-01T00:00:00.000Z",
-      "bookingsClose": "2023-06-30T23:00:00.000Z",
+      "pitches": ["hobbit holes", "elven ruins"],
+      "bookingsOpen": "2025-03-01T00:00:00.000Z",
+      "bookingsClose": "2025-06-30T23:00:00.000Z",
       "postCode": "BB7 9QR",
-      "siteImgs": [
-        "https://live.staticflickr.com/1962/44214791934_49725bfbc0_b.jpg",
-        "http://www.theshirekillarney.com/wp-content/uploads/2019/03/the-shire-accommodation.jpg",
-        "https://i.pinimg.com/736x/30/2d/e4/302de48e0ca3a7d19aa04708553b3189.jpg"
-      ]
+      "siteImgs": ["theShire_1.jpg", "theShire_2.jpg", "theShire_3.jpg"]
     },
     {
       "id": 3,
       "country": "England",
       "area": "yorkshire dales",
-      "activities": [
-        "hiking",
-        "villages"
-      ],
+      "activities": ["hiking", "villages"],
       "description": "Morbi tristique senectus et netus. Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Sed velit dignissim sodales ut eu sem integer vitae. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Ac turpis egestas maecenas pharetra convallis posuere morbi. Nascetur ridiculus mus mauris vitae. Massa vitae tortor condimentum lacinia. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Risus sed vulputate odio ut enim blandit volutpat maecenas. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt.",
-      "pitches": [
-        "camping",
-        "yurts",
-        "caravans",
-        "shepherd huts"
-      ],
-      "bookingsOpen": "2023-04-01T00:00:00.000Z",
-      "bookingsClose": "2023-09-31T23:00:00.000Z",
+      "pitches": ["camping", "yurts", "caravans", "shepherd huts"],
+      "bookingsOpen": "2025-04-01T00:00:00.000Z",
+      "bookingsClose": "2025-09-31T23:00:00.000Z",
       "postCode": "BD23 3LB",
       "siteImgs": [
-        "https://images.campsites.co.uk/subregion/213/6b1e7b77-2b8b-4b7c-bc5b-5f9ababba11b/1362/600/either/campsites-in-the-yorkshire-dal.jpg",
-        "https://www.ukcampsite.co.uk/sites/siteimages/4320_2.jpg",
-        "https://www.lovecamping.co.uk/campsiteimages/x630x420/4829_20160426111752572.jpg"
+        "yorkshireDales_1.jpg",
+        "yorkshireDales_3.jpg",
+        "yorkshireDales_3.jpeg"
       ]
     },
     {
       "id": 4,
       "country": "England",
       "area": "glastonbury",
-      "activities": [
-        "music",
-        "arts"
-      ],
+      "activities": ["music", "arts"],
       "description": "Et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisl condimentum id venenatis a condimentum vitae. Amet purus gravida quis blandit turpis. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Scelerisque eu ultrices vitae auctor eu augue ut. Mauris rhoncus aenean vel elit scelerisque mauris. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Erat imperdiet sed euismod nisi porta.",
-      "pitches": [
-        "camping",
-        "yurts",
-        "communes"
-      ],
-      "bookingsOpen": "2023-06-23T23:00:00.000Z",
-      "bookingsClose": "2023-06-27T23:00:00.000Z",
+      "pitches": ["camping", "yurts", "communes"],
+      "bookingsOpen": "2025-06-23T23:00:00.000Z",
+      "bookingsClose": "2025-06-27T23:00:00.000Z",
       "postCode": "TA11 7DP",
       "siteImgs": [
-        "https://www.pennardhillfarm.co.uk/wp-content/uploads/2017/05/activities-1.jpg",
-        "https://www.pennardorchard.co.uk/wp-content/uploads/2018/09/luxury-yurt-flowers-pennard-orchard.jpg",
-        "https://ksassets.timeincuk.net/wp/uploads/sites/55/2015/06/2015GlastonburySiteVisit04DanKendall110615-2.jpg"
+        "glastonbury_1.png",
+        "glastonbury_2.jpg",
+        "glastonbury_3.jpg"
       ]
     },
     {
       "id": 5,
       "country": "Scotland",
       "area": "pencaitland",
-      "activities": [
-        "hiking",
-        "villages"
-      ],
+      "activities": ["hiking", "villages"],
       "description": "Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Dignissim enim sit amet venenatis urna cursus eget nunc. Dictum non consectetur a erat nam at. Iaculis eu non diam phasellus vestibulum. In ornare quam viverra orci. Adipiscing commodo elit at imperdiet dui. Posuere ac ut consequat semper viverra. Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Tempus quam pellentesque nec nam aliquam sem et tortor consequat.",
-      "pitches": [
-        "shepherd huts",
-        "camping"
-      ],
-      "bookingsOpen": "2023-04-23T23:00:00.000Z",
-      "bookingsClose": "2023-10-27T23:00:00.000Z",
+      "pitches": ["shepherd huts", "camping"],
+      "bookingsOpen": "2025-04-23T23:00:00.000Z",
+      "bookingsClose": "2025-10-27T23:00:00.000Z",
       "postCode": "EH34 5AE",
       "siteImgs": [
-        "https://cimg.visitscotland.com/cms-images/accommodation/winton-house-east-lothian?size=md",
-        "https://www.tiso.com/templates/tiso.com/_images//blog/fiona-outdoors/april17/banner.jpg",
-        "https://www.visitscotland.com/binaries/content/gallery/visitscotland/cms-images/2022/09/21/the-torridon"
+        "pencaitland_1.jpeg",
+        "pencaitland_2.jpg",
+        "pencaitland_3.jpg"
       ]
     },
     {
       "id": 6,
       "country": "Scotland",
       "area": "isle of mull",
-      "activities": [
-        "water sports",
-        "questing",
-        "arts"
-      ],
+      "activities": ["water sports", "questing", "arts"],
       "description": "Vel orci porta non pulvinar neque laoreet. Ultrices eros in cursus turpis massa tincidunt dui ut. Ultricies integer quis auctor elit sed vulputate mi sit amet. Ut consequat semper viverra nam libero justo laoreet sit. In est ante in nibh mauris. Viverra nam libero justo laoreet sit amet. Cursus turpis massa tincidunt dui. Lectus urna duis convallis convallis tellus id. Vitae nunc sed velit dignissim sodales ut eu sem.",
-      "pitches": [
-        "camping",
-        "communes"
-      ],
-      "bookingsOpen": "2023-07-12T23:00:00.000Z",
-      "bookingsClose": "2023-09-28T23:00:00.000Z",
+      "pitches": ["camping", "communes"],
+      "bookingsOpen": "2025-07-12T23:00:00.000Z",
+      "bookingsClose": "2025-09-28T23:00:00.000Z",
       "postCode": "PA62 6AA",
-      "siteImgs": [
-        "https://believeinblissblog.files.wordpress.com/2018/04/69f7cb34-4a8e-4616-9a66-efedf8758d09.jpg?w=1200",
-        "https://media-cdn.tripadvisor.com/media/photo-s/03/e3/41/b2/shieling-holidays.jpg",
-        "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/bltbb8eb7242374ba8e/616683ecaeba391136e45258/UK_Tobermory_UK_Header.jpg?width=1680&quality=70"
-      ]
+      "siteImgs": ["isleOfMull_1.jpg", "isleOfMull_2.png", "isleOfMull_3.jpg"]
     },
     {
       "id": 7,
       "country": "Wales",
       "area": "brecon beacons",
-      "activities": [
-        "villages",
-        "hiking",
-        "elevenses"
-      ],
+      "activities": ["villages", "hiking", "elevenses"],
       "description": "Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Consequat nisl vel pretium lectus quam id leo. Nibh praesent tristique magna sit amet purus gravida quis blandit. Hendrerit gravida rutrum quisque non tellus. Morbi enim nunc faucibus a. Eu non diam phasellus vestibulum lorem sed. ",
-      "pitches": [
-        "elven ruins",
-        "yurts",
-        "shepherd huts"
-      ],
-      "bookingsOpen": "2023-03-11T23:00:00.000Z",
-      "bookingsClose": "2023-09-19T23:00:00.000Z",
+      "pitches": ["elven ruins", "yurts", "shepherd huts"],
+      "bookingsOpen": "2025-03-11T23:00:00.000Z",
+      "bookingsClose": "2025-09-19T23:00:00.000Z",
       "postCode": "LD3 7BA",
       "siteImgs": [
-        "https://thirdeyetraveller.com/wp-content/uploads/llanthony-priory-abbey-brecon-beacons-wales-1-of-19-689x517.jpg",
-        "https://static.wixstatic.com/media/1d5bd9_d5e4c01da8464b30a499a263f23c6070~mv2.jpg/v1/fill/w_551,h_413/1d5bd9_d5e4c01da8464b30a499a263f23c6070~mv2.jpg",
-        "https://love-glamping.co.uk/wp-content/uploads/2022/12/glamping-wales-wye-glamping-yurt-8-768x512.jpg"
+        "breconBeacons_1.jpg",
+        "breconBeacons_2.png",
+        "breconBeacons_3.png"
       ]
     },
     {
       "id": 8,
       "country": "Ireland",
       "area": "lough neagh",
-      "activities": [
-        "water sports",
-        "questing",
-        "arts"
-      ],
+      "activities": ["water sports", "questing", "arts"],
       "description": "Donec enim diam vulputate ut pharetra sit. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Sed vulputate mi sit amet mauris commodo quis imperdiet. Et tortor at risus viverra adipiscing at in. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Dui accumsan sit amet nulla facilisi. Commodo ullamcorper a lacus vestibulum sed arcu. Elit eget gravida cum sociis. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Turpis nunc eget lorem dolor. Elementum nibh tellus molestie nunc non blandit massa.",
-      "pitches": [
-        "camping",
-        "yurts",
-        "communes"
-      ],
-      "bookingsOpen": "2023-05-01T23:00:00.000Z",
-      "bookingsClose": "2023-08-24T23:00:00.000Z",
+      "pitches": ["camping", "yurts", "communes"],
+      "bookingsOpen": "2025-05-01T23:00:00.000Z",
+      "bookingsClose": "2025-08-24T23:00:00.000Z",
       "postCode": "BT66 6NJ",
-      "siteImgs": [
-        "https://media-cdn.tripadvisor.com/media/photo-s/0e/fd/cb/f9/glamping-village-hot.jpg",
-        "https://visitantrimandnewtownabbey.com/getmedia/3a36d926-1e7e-4852-b3fc-8b30de022034/17380_Rams_Island.jpeg",
-        "http://www.outdoorni.com/blog/i/library/380.jpg"
-      ]
+      "siteImgs": ["loughNeagh_1.jpg", "loughNeagh_2.jpg", "loughNeagh_3.jpg"]
     }
   ]
 }

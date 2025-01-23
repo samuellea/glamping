@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
-import { Link } from "@reach/router";
+import { Link } from '@reach/router';
 import Homegif from '../assets/campingdribble2.gif';
 import Footer from './Footer';
 
@@ -22,8 +22,6 @@ import Questing from '../assets/questing.jpeg';
 import Villages from '../assets/villages.jpg';
 import Watersports from '../assets/watersports.jpeg';
 
-
-
 class Home extends Component {
   // state = {
 
@@ -34,30 +32,27 @@ class Home extends Component {
       <div className="home">
         <Container className="landingContainer" fluid={true}>
           <Row className="pic">
-
             <div class="image-holder">
               <img src={Homegif} class="card-img-top img-fluid homegif" />
             </div>
-
           </Row>
 
           <Row className="text font-weight-bold h3">
             <div>We've been helping users find their</div>
-            <div>dream getaways since 2023</div>
+            <div>dream getaways since 2025</div>
             <div style={{ color: '#9f5ad5' }}>#BoutiqueGlamping</div>
           </Row>
           <Row className="button">
-            <Link to={"/search"}>
-              <Button className="greenButton findMineButton">
-                FIND MINE
-              </Button>
+            <Link to={'/search'}>
+              <Button className="greenButton findMineButton">FIND MINE</Button>
             </Link>
           </Row>
 
-
           <Row className="activitiesWindowLabel font-weight-bold h3">
             <div>Whatever your interests - </div>
-            <div style={{ color: '#9f5ad5' }}>the perfect glamping experience awaits!</div>
+            <div style={{ color: '#9f5ad5' }}>
+              the perfect glamping experience awaits!
+            </div>
           </Row>
 
           <Row className="activitiesWindowTop">
@@ -75,7 +70,6 @@ class Home extends Component {
               <img src={Hiking} class="img-fluid" />
               <div class="centered">Hiking</div>
             </Col>
-
           </Row>
 
           <Row className="activitiesWindowBottom">
@@ -95,7 +89,9 @@ class Home extends Component {
 
           <Row className="accommodationWindowLabel font-weight-bold h3">
             <div>Accommodation to suit you - </div>
-            <div style={{ color: '#9f5ad5' }}>adventurous, fabulous and everything in-between...</div>
+            <div style={{ color: '#9f5ad5' }}>
+              adventurous, fabulous and everything in-between...
+            </div>
           </Row>
 
           <Row className="accommodationWindowTop">
@@ -127,15 +123,10 @@ class Home extends Component {
               <div class="centered">Camping</div>
             </Col>
           </Row>
-
-
         </Container>
-
-
-      </div >
-    )
+      </div>
+    );
   }
-
 }
 
 export default Home;
